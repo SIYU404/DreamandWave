@@ -1,0 +1,173 @@
+Dream EEG and Mentation (DREAM) dataset
+=======================================
+
+
+Dataset information
+-------------------
+
+- Common name: REM_Turku
+- Full name: REM_Turku
+- Authors: Pilleriin Sikka, Antti Revonsuo, Valdas Noreika, Katja Valli
+- Location: Turku, Finland
+- Year: N/A
+- Set ID: 6
+- Amendment: 0
+- Corresponding author ID: 7
+
+Previous publications:  
+- Sikka, P., Revonsuo, A., Noreika, V., & Valli, K. (2019). EEG frontal alpha asymmetry and dream affect: Alpha oscillations over the right frontal cortex during REM sleep and presleep wakefulness predict anger in REM sleep dreams. Journal of Neuroscience, 39(24): 4775-4784. https://doi.org/10.1523/JNEUROSCI.2884-18.2019
+
+- Sikka, P., Revonsuo, A., Sandman, N., Tuominen, J., & Valli, K. (2018). Dream emotions: A comparison of home dream reports with laboratory early and late REM dream reports. Journal of Sleep Research, 27(2), 206-214. doi: 10.1111/jsr.12555
+
+- Sikka, P., Valli, K., Virta, T., & Revonsuo, A. (2014). I know how you felt last night, or do I? Self- and external ratings of emotions in REM sleep dreams. Consciousness and Cognition, 25, 51–66. http://dx.doi.org/10.1016/j.concog.2014.01.011
+
+Correspondence:  
+Pilleriin Sikka (pilsik@utu.fi, sikka@stanford.edu, pilleriin.sikka@his.se), Katja Valli (katval@utu.fi)
+
+
+Metadata
+--------
+
+- Key ID: 7
+- Date entered: 2023-02-28T10:18:25+00:00
+- Number of samples: 134
+- Number of subjects: 18
+- Proportion REM: 100%
+- Proportion N1: 0%
+- Proportion N2: 0%
+- Proportion W: 0%
+- Proportion experience: 92%
+- Proportion no-experience: 2%
+- Proportion healthy: 100%
+- Provoked awakening: Yes
+- Time of awakening: Night
+- Form of response: Free
+- Date approved: 2023-02-28T10:19:59+00:00
+
+
+How to decode data files
+------------------------
+
+The PSG files are raw (i.e., not preprocessed) EEG data files and include the last 2 minutes of preawakening EEG from each REM episode obtained using a serial awakening paradigm in the sleep laboratory.
+Data set includes EEG data from 134 awakenings of 18 participants.
+
+Files are organized according to the format: /Data/PSG/casexx_syy, where  
+xx refers to Case ID  
+yy refers to Subject ID
+
+In the "Records.csv" file, the following information is presented:
+
+- Filename: in the format casexx_syy.edf
+- Case ID: unique identifier of sample
+- Subject ID: unique identifier of subject
+- Experience: 2 = dream experience; 1 = without recall ("white dream"); 0 = no dream experience
+- Treatment group: N/A
+- Duration: duration of the EEG data file in seconds
+- EEG sample rate: the sampling rate of the EEG in Hertz
+- Number of EEG channels: the number of EEG signals in this sample
+- Last sleep stage: the scored sleep stage of the final epoch in the sample (1 = N1; 2 = N2; 3 = N3/NREM3/NREM4; 5=REM)
+- Has EOG: whether EOG is included in the sample (1 = yes; 0 = no)
+- Has EMG: whether EMG is included in the sample (1 = yes; 0 = no)
+- Has ECG: whether ECG is included in the sample (1 = yes; 0 = no)
+- Proportion artifacts: N/A
+- Time of awakening: time when this sample’s PSG ends
+- Subject age: age of the subject
+- Subject sex: sex of the subject (key: 0 = male, 1 = female; 2 = other)
+- Subject healthy: whether subject is from a relatively healthy population (key: 0 = no; 1 = yes)
+- Has more data: whether this sample has more data in the form of files under the /Data directory other than the /Data/PSG directory (key: 0=no, 1=yes)
+- Remarks: The first number refers to the number of experimental night in the sleep lab for the subject, the second number refer to the number of awakening during that night (e.g., 1_3 refers to Night 1, Awakening 3).
+- Remarks can also include other important information regarding this subject or data file.
+
+In the "Ratings.csv" file, the following information is presented:
+
+- Filename: in the format (/Data/PSG/)casexx_syy
+- DreamReport_Wordcount: total number of dream-related words minus utterances, fillers, repetitions, corrections, waking commentaries
+- ER = external ratings of emotions expressed in dream reports, conducted by two blind judges using the Finnish version of the modified Differential Emotions Scale (mDES; Fredrickson, 2013); the number refers to the frequency of occurrence of the emotion item in the dream report
+- SR = self-ratings of emotions experienced in the preceding dream using the mDES, conducted by participants themselves upon awakening and after having reported the dream; each item was rated on the scale from 0 = not at all to 4 = extremely much
+- PA = positive emotion/affect item of mDES
+- NA = negative emotion/affect item of mDES
+
+The following are the 10 positive and 10 negative emotion/affect items of the mDES scale:
+
+* PA1 - Amused_Funloving_Giggly
+* PA2 - Awe_Wonder_Amazement
+* PA3 - Grateful_Appreciative_Thankful
+* PA4 - Hopeful_Optimistic_Encouraged
+* PA5 - Inspired_Uplifted_Elevated
+* PA6 - Interested_Alert_Curious
+* PA7 - Joyful_Glad_Happy
+* PA8 - Love_Closeness_Trust
+* PA9 - Proud_Confident_Selfassured
+* PA10 - Serene_Content_Peaceful
+* NA1 - Angry_Irritated_Annoyed
+* NA2 - Ashamed_Humiliated_Disgraced
+* NA3 - Contemptuous_Scornful_DIsdainful
+* NA4 - Disgust_Distaste_Revulsion
+* NA5 - Embarrassed_Selfconscious_Blushing
+* NA6 - Guilty_Repetant_Blameworthy
+* NA7 - Hate_Distrust_Suspicion
+* NA8 - Sad_Downhearted_Unhappy
+* NA9 - Scared_Fearful_Afraid
+* NA10 - Stressed_Nervous_Overwhelmed
+* ER_InferredExpressed = whether the emotion was directly expressed in the dream report or could be inferred from the behaviour of the dream self (key: 1 = expressed, 2 = inferred, 3 = both)
+* Remarks: any remarks regarding this data file
+
+
+### Treatment group codes ###
+
+N/A
+
+
+Experimental description
+------------------------
+
+A full description of the materials and methods can be found in the following article:  
+Sikka, P., Revonsuo, A., Noreika, V., & Valli, K. (2019). EEG frontal alpha asymmetry and dream affect: Alpha oscillations over the right frontal cortex during REM sleep and presleep wakefulness predict anger in REM sleep dreams. Journal of Neuroscience, 39(24): 4775-4784. https://doi.org/10.1523/JNEUROSCI.2884-18.2019
+
+Participants:  
+Healthy, not using medication, right-handed, native Finnish speakers, with good sleep quality (score ≤ 5 on the Pittsburgh Sleep Quality Index; Buysse et al., 1989).
+
+Experimental design and procedure:  
+For a Figure displaying the experimental procedure, see Sikka et al. (2019, p. 4777).
+
+Participants spent 2 nights (separated by a week) in the sleep laboratory. In the evening, participants arrived in the laboratory 2h before their usual bedtime.  
+First, participants were instructed about the procedure of the study and EEG electrodes attached to their scalp.  
+Next, participants' waking state resting EEG was recorded (8 x 1 min; 10:30pm-12:00am) and they rated their current waking affective state using the Finnish version of the modified Differential Emotions Scale (fmDES, Fredickrson, 2013).
+
+Participants were then allowed to fall asleep. Sleep stages were monitored and scored visually (Rechtschaffen and Kales, 1968; Iber et al., 2007). Every time REM sleep had lasted continuously for 5 min, and was in a phasic stage, a tone signal was used to awaken the participants. Upon awakening, participants provided an oral dream report: first, they reported the last image they had in mind just before awakening, followed by a detailed report of the whole dream. Next, participants rated their affective experiences in the preceding dream by filling in the fmDES electronically using a mouse and a computer screen above the bed. In case the participants reported ‘‘no dreams’’, researchers asked whether they had not had a dream or they felt like they had had a dream but could not recall any specific content (i.e., ‘white dream’). In these two cases fmDES was not filled in. Participants were then allowed to continue their sleep.
+
+This procedure was repeated throughout the night until the final morning awakening (scheduled between 5:30 A.M. to 8:30 A.M.).  
+Upon final awakening, and after having reported and rated the last dream, participants were asked to lie in bed but stay awake. Similar to the evening, waking state resting (morning baseline) EEG was then recorded for 8 min, followed by participants’ ratings of their current waking state affect using the fmDES.
+
+
+### DREAM categorization procedure ###
+
+Dream experiences = participants remembered having a dream and were able to report at least some of its content.
+
+Without recall ("white dream" = participants felt like they had had a dream but could not recall any specific content.
+
+No recall = participants reported not having had any dream experiences.
+
+
+Technical details
+-----------------
+
+N/A
+
+
+### Data acquisition ###
+
+EEG was recorded using 24 single Ag/AgCl electrodes (placed according to standard 10/10 system).
+
+Additionally, 4 EOG electrodes were used to record eye movements and an EMG electrode (placed on the chin) was used to record muscle activity.
+
+All electrodes (except the bipolar EOG and EMG electrodes) were references to the right mastoid. The ground electrode was placed on the forehead.
+
+EEG signal was amplified (SynAmps model 5083), notch-filtered at 50 Hz, digitized at 500 Hz, and recorded with Neuroscan equipment and software.
+
+All impedances were kept <5 kΩ.
+
+
+### Data preprocessing ###
+
+Data has not been preprocessed.
